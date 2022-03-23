@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="knjigeReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="228f1f56-2414-4d46-97b9-fe1bf1ba62dd">
+	<parameter name="radnik" class="java.lang.String"/>
+	<parameter name="datum" class="java.util.Date"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="pisac.ime" class="java.lang.String"/>
+	<field name="pisac.prezime" class="java.lang.String"/>
+	<field name="naziv" class="java.lang.String"/>
+	<field name="izdavac" class="java.lang.String"/>
+	<field name="godinaIzdanja" class="java.lang.Integer"/>
+	<field name="cena" class="java.lang.Integer"/>
+	<field name="brojKnjigaLager" class="java.lang.Integer"/>
+	<variable name="pisac" class="java.lang.String">
+		<variableExpression><![CDATA[$F{pisac.ime}+" "+$F{pisac.prezime}]]></variableExpression>
+	</variable>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{izdavac}]]></groupExpression>
+		<groupHeader>
+			<band height="99">
+				<staticText>
+					<reportElement x="20" y="30" width="54" height="30" uuid="7d94759a-7221-4c95-ac66-a238ef1023d7"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Candara" size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Izdavac:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="19" y="69" width="110" height="30" forecolor="#FFFFFF" backcolor="#D1000E" uuid="00ddf13b-f6f5-4c87-b9e9-e5536d77e435"/>
+					<box>
+						<pen lineColor="#BF0006"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Candara" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Naziv ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="129" y="69" width="100" height="30" forecolor="#FFFFFF" backcolor="#D1000E" uuid="eb1fac19-e0a4-4a87-89b0-03d513aced30"/>
+					<box>
+						<pen lineColor="#BF0006"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Candara" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Pisac]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="229" y="69" width="110" height="30" forecolor="#FFFFFF" backcolor="#D1000E" uuid="2be4cf69-8e8d-4952-afc8-5a9ffeb94ca9"/>
+					<box>
+						<pen lineColor="#BF0006"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Candara" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Godina izdanja]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="339" y="69" width="80" height="30" forecolor="#FFFFFF" backcolor="#D1000E" uuid="48824570-9dd3-4511-921b-e5a60a772c20"/>
+					<box>
+						<pen lineColor="#BF0006"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Candara" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Cena]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="419" y="69" width="120" height="30" forecolor="#FFFFFF" backcolor="#D1000E" uuid="2e8e590f-f66d-4197-992a-6d34bfda89da"/>
+					<box>
+						<pen lineColor="#BF0006"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Candara" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Broj knjiga
+na lageru]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Opaque" x="74" y="30" width="90" height="30" forecolor="#000000" backcolor="#FFFFFF" uuid="ca61c39a-ff0e-4674-be1a-edfb6ea1f3c1">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f33afb8c-b020-40d0-a7a9-883c69df968a"/>
+					</reportElement>
+					<box>
+						<pen lineColor="#BF0006"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Candara" size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{izdavac}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="185" y="20" width="184" height="30" uuid="47d11a57-d05a-476b-b8f7-4d8ae04a3a09"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Candara" size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Spisak knjiga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="158" height="20" uuid="b29f27ce-0db1-46bd-ab41-cbc538c93987"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Candara" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Izdavacka kuca "SOFIA"]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="85" y="10" width="54" height="18" uuid="58e96963-2ff8-4014-8c52-1aafda3401b1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Candara" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Radnik:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="28" width="54" height="18" uuid="1069c57d-09e8-451c-b5be-649ba09acff7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Candara" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Datum:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="10" width="100" height="18" uuid="76461fde-449a-442c-98ff-31859caa9d23"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Candara" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{radnik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="28" width="100" height="18" uuid="ff009359-2995-4f9b-85b2-e7bac58b9683"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Candara" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{datum}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="1" splitType="Stretch">
+			<staticText>
+				<reportElement x="92" y="0" width="100" height="1" uuid="0673b3c1-cbf6-45cb-ac61-4748c7c53499">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ea3e532b-e53a-4d3f-9b29-78adc27ab2f4"/>
+				</reportElement>
+				<text><![CDATA[naziv]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="241" y="0" width="100" height="1" uuid="0f9b1f1f-10a5-4834-89af-57eb72506267">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f33afb8c-b020-40d0-a7a9-883c69df968a"/>
+				</reportElement>
+				<text><![CDATA[izdavac]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="0" width="100" height="1" uuid="5efced66-c0b1-43c9-9f46-d4f33bb448d5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ea12f963-ff60-41bc-8efc-a66504591a79"/>
+				</reportElement>
+				<text><![CDATA[godinaIzdanja]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="418" y="0" width="100" height="1" uuid="d12a4bcc-68b0-488d-affb-5def39d04dea">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="32dfdf9d-e673-4860-8db7-3ef572dd8e06"/>
+				</reportElement>
+				<text><![CDATA[cena]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="518" y="0" width="100" height="1" uuid="47a8e6ce-915d-48b9-876a-c336a12ad4a7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a014e57f-1ecb-441f-94ef-feb8962d6594"/>
+				</reportElement>
+				<text><![CDATA[brojKnjigaLager]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="19" y="0" width="110" height="30" forecolor="#FFFFFF" backcolor="#FF824D" uuid="fa27289a-52b0-40fa-bea2-51970718d795">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ea3e532b-e53a-4d3f-9b29-78adc27ab2f4"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#BF0006"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Candara" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{naziv}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="229" y="0" width="110" height="30" forecolor="#FFFFFF" backcolor="#FF824D" uuid="aac34850-beae-4528-a817-60e529e01db1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ea12f963-ff60-41bc-8efc-a66504591a79"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#BF0006"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Candara" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{godinaIzdanja}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="339" y="0" width="80" height="30" forecolor="#FFFFFF" backcolor="#FF824D" uuid="4ca4d239-cb79-43a9-b9c3-7fd8cdf1d3ba">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="32dfdf9d-e673-4860-8db7-3ef572dd8e06"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#BF0006"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Candara" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cena}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="419" y="0" width="120" height="30" forecolor="#FFFFFF" backcolor="#FF824D" uuid="d9afbcaa-aff4-4e07-8c77-fdb94b8da286">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a014e57f-1ecb-441f-94ef-feb8962d6594"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#BF0006"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Candara" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{brojKnjigaLager}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="129" y="0" width="100" height="30" forecolor="#FFFFFF" backcolor="#FF824D" uuid="75d339d4-781f-4083-b6c1-ab38adc970b7"/>
+				<box>
+					<pen lineColor="#BF0006"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#BF0006"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Candara" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{pisac}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="41" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement x="220" y="30" width="128" height="20" uuid="e2641d53-5db6-463c-8d81-6da964f16f3b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Candara" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
